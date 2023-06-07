@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion de peliculas</title>
+    <link rel="stylesheet" href="../ccs/estilos.css">
+    <script src="../js/objetos.js"></script>
+    <script src="../js/gestionPelicula.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <header>
+        <a href="pagina_administrador.html"><button>Volver</button></a> 
+        <a href="../index.html"><button>Cerrar Sesión</button></a> 
+    </header>
+
+    <h1>Gestion de peliculas</h1>
+
+    <form action="javascript:gestionarPelicula">
+
+        <div class="contenedor">
+
+            <div class="divizqui">
+                Codigo<input id="codigo" class="form-control form-control-sm" type="text" placeholder="AB002"
+                    aria-label=".form-control-lg example" pattern="^[a-zA-Z0-9]+$">
+                Nombre Original<input id="nombreOriginal" class="form-control form-control-sm" type="text"
+                    placeholder="Fast & Furios" aria-label="default input example">
+                Nombre Asignado<input id="nombreAsignado" class="form-control form-control-sm" type="text"
+                    placeholder="Rapidos y Furiosos" aria-label=".form-control-sm example">
+                Genero<input id="genero" class="form-control form-control-sm" type="text"
+                    placeholder="Accion, Comedia, Ciencia Ficcion" aria-label=".form-control-sm example">
+                Idioma Original<input id="idiomaOriginal" class="form-control form-control-sm" type="text"
+                    placeholder="Ingles" aria-label=".form-control-sm example">
+                Idiomas Disponibles<input id="idiomasDisponibles" class="form-control form-control-sm" type="text"
+                    placeholder="Español, Portuguez, Frances, Italiano" aria-label=".form-control-sm example">
+                Subtitulos Disponibles<input id="subtitulosDisponibles" class="form-control form-control-sm" type="text"
+                    placeholder="Español, Portuguez, Frances, Italiano" aria-label=".form-control-sm example">
+            </div>
+
+            <div class="divdere">
+                Duracion (HH:MM:SS)<br>
+                <input id="horas" class="form-control form-control-sm" type="number" placeholder="Horas"
+                    aria-label=".form-control-sm example">
+                <input id="minutos" class="form-control form-control-sm" type="number" placeholder="Minutos"
+                    aria-label=".form-control-sm example">
+                <input id="segundos" class="form-control form-control-sm" type="number" placeholder="Segundos"
+                    aria-label=".form-control-sm example">
+                Actores Principales<input id="actoresPrincipales" class="form-control form-control-sm" type="text"
+                    placeholder="xxxxxx, xxxxxx, xxxxxxx, xxxxxxx" aria-label=".form-control-sm example">
+                Actores Secundarios<input id="actoresSecundarios" class="form-control form-control-sm" type="text"
+                    placeholder="xxxxxx, xxxxxx, xxxxxxx, xxxxxxx" aria-label=".form-control-sm example">
+                Nº de Afiches<input id="numeroAfiches" class="form-control form-control-sm" type="number"
+                    placeholder="Ponga la cantidad" aria-label=".form-control-sm example">
+                Nº de Copias<input id="numeroCopias" class="form-control form-control-sm" type="number"
+                    placeholder="Ponga la cantidad" aria-label=".form-control-sm example">
+                Productora
+                <select id="productora" class="form-control form-control-sm" aria-label=".form-control-sm example">
+                    <option value="">Seleccione la productora</option>
+                    <option value="opcion1">Productora 1</option>
+                    <option value="opcion2">Productara 2</option>
+                    <option value="opcion3">Productora 3</option>
+                </select>
+                <br>
+
+            </div>
+
+        </div>
+
+    </form>
+
+    <div class="col-auto">
+        <button type="submit" class="btn btn-primary" onclick="gestionarPelicula()">Guardar</button>
+    </div>
+
+    <script>
+
+        console.log("Gestio realizada")
+        console.log(JSON.parse(localStorage.getItem("peliculas") || "[]"))
+    
+      </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

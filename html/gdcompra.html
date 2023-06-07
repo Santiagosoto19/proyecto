@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion de compras</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="../ccs/estilos_b.css">
+    <script src="../js/agregarF.js"></script>
+    <script src="../js/compra.js"></script>
+
+</head>
+<body>
+    
+    <header>
+
+        <a href="pagina_vendedor.html">
+
+            <button>Volver</button>
+        </a>
+
+        <h1>Gestion de compra</h1>
+
+        <a href="../index.html"><button>Cerrar Sesión</button></a> 
+
+    </header>
+
+    <form action="javascript:adicionarCompra()">
+
+        <div class="contenedor">
+
+            <div class="divizqui">
+
+                Numero <input type="number" class="form-control form-control-sm" id="numero" pattern="^[a-zA-Z0-9]+$">
+
+                Sucursal <input type="text" class="form-control form-control-sm" id="sucursal">
+            
+                <div id="peliculas">
+
+                    Peliculas 
+
+                    <table border="1px solid black" id="tabla">
+
+                        <tr>
+
+                            <th>Pelicula</th>
+
+                            <th>Precio</th>
+
+
+                        </tr>
+
+                        <td><input type="text" class="form-control form-control-sm" id="nombrep"></td>
+
+                        <td><input type="text" class="form-control form-control-sm" id="preciop"></td>
+
+                        <button onclick="agregarPeliculas()">Agregar otra pelicula</button>
+
+                    </table>
+
+                
+
+                </div>
+
+                Cantidades <input type="number" class="form-control form-control-sm" requiered id="cantidades">
+
+            </div>
+
+            <div class="divdere">
+
+                Subtotal <input type="number" class="form-control form-control-sm" id="subtotal">
+
+                Total <input type="number" class="form-control form-control-sm" id="total">
+
+                Fecha <input type="date" class="form-control form-control-sm" id="fecha">
+
+                Precio <input type="number" class="form-control form-control-sm" id="precio">
+
+            </div>
+
+        </div>
+
+        <div class="col-auto" style="text-align: center;">
+
+            <button type="submit" class="btn btn-primary">Registrar</button>
+
+        </div>
+
+    </form>
+
+    <script>console.log(JSON.parse(localStorage.getItem("compras") || "[]"))</script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+</body>
+</html>

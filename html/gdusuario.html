@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion de usuario</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="../ccs/estilos_b.css">
+    <script src="../js/usuario.js"></script>
+    <script src="../js/agregarF.js"></script>
+
+</head>
+<body>
+
+    <header>
+
+        <a href="pagina_administrador.html">
+
+            <button>Volver</button>
+        </a>
+
+        <h1>Gestion de usuario</h1>
+
+        <a href="../index.html"><button>Cerrar Sesión</button></a> 
+
+    </header>
+
+    <form action="javascript:adicionarUsuario()">
+    
+        <div class="container justify-content-center align-items-center">
+
+            Usuario <input type="text" class="form-control form-control-sm" requiered placeholder="Escriba su usuario" id="usuario" pattern="^[a-zA-Z0-9]+$">
+
+            Contraseña <input type="password" class="form-control form-control-sm" requiered placeholder="Escriba su contraseña" id="contraseña">
+
+            Rol <select class="form-control form-control-sm" requiered id="rol">
+
+                <option value="--">Eliga un Rol</option>
+                <option value="administrador">Administrador</option>
+                <option value="gerente">Gerente</option>
+                <option value="vendedor">Vendedor</option>
+                <option value="cliente">Cliente</option>
+
+            </select>
+            
+        </div>
+
+            <div class="col-auto" style="text-align: center;">
+
+                <button type="submit" class="btn btn-primary">Registrar</button>
+    
+            </div>
+        
+    </form>
+
+    <script>console.log(JSON.parse(localStorage.getItem("usuarios") || "[]"))</script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    
+</body>
+</html>

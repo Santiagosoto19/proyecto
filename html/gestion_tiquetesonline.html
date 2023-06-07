@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestion de tiquetes Online</title>
+  <link rel="stylesheet" href="../ccs/estilos.css">
+  <script src="../js/tiquetesonli.js"></script>
+  <script src="../js/objetos.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+  <header>
+    <a href="../index.html"><button>Cerrar Sesión</button></a> 
+  </header>
+
+  <h1>Gestion de venta de tiquetes</h1>
+
+  <form action="javascript:adicionarTiquetesOnline">
+    <div class="contenedor">
+      <div class="divizqui">
+        Sala
+        <select class="form-control form-control-sm" aria-label=".form-control-sm example" id="sala">
+          <option value="">Seleccione la sala</option>
+          <option value="opcion1">Sala 1</option>
+          <option value="opcion2">Sala 2</option>
+          <option value="opcion3">Sala 3</option>
+        </select>
+        Horario
+        <select class="form-control form-control-sm" aria-label=".form-control-sm example" id="horario">
+          <option value="">Seleccione la hora</option>
+          <option value="opcion1">Hora 1</option>
+          <option value="opcion2">Hora 2</option>
+          <option value="opcion3">Hora 3</option>
+        </select>
+        Nº de tiquetes
+        <input class="form-control form-control-sm" type="number" placeholder="5" aria-label=".form-control-sm example"
+        id="numTiquetes">
+        Posiciones
+        <div class="container text-center">
+          <div class="row">
+            <div class="col">
+              Asientos en A
+              <ul class="list-group list-group-horizontal">
+                <li class="list-group-item">A1<input class="form-check-input" type="checkbox" value=""
+                    id="flexCheckDefault"></li>
+                <li class="list-group-item">A2<input class="form-check-input" type="checkbox" value=""
+                    id="flexCheckDefault"></li>
+                <li class="list-group-item">A3<input class="form-check-input" type="checkbox" value=""
+                    id="flexCheckDefault"></li>
+              </ul>
+              <ul class="list-group list-group-horizontal-sm">
+                <li class="list-group-item">A4<input class="form-check-input" type="checkbox" value=""
+                    id="flexCheckDefault"></li>
+                <li class="list-group-item">A5<input class="form-check-input" type="checkbox" value=""
+                    id="flexCheckDefault"></li>
+                <li class="list-group-item">A6<input class="form-check-input" type="checkbox" value=""
+                    id="flexCheckDefault"></li>
+              </ul>
+              <ul class="list-group list-group-horizontal-md">
+                <li class="list-group-item">A7<input class="form-check-input" type="checkbox" value=""
+                    id="flexCheckDefault"></li>
+                <li class="list-group-item">A8<input class="form-check-input" type="checkbox" value=""
+                    id="flexCheckDefault"></li>
+                <li class="list-group-item">A9<input class="form-check-input" type="checkbox" value=""
+                    id="flexCheckDefault"></li>
+              </ul>
+            </div>
+            <div class="col">
+              Asientos en B
+              <ul class="list-group list-group-horizontal">
+                <li class="list-group-item">B1<input class="form-check-input" type="checkbox" value=""
+                    id="flexCheckDefault"></li>
+                <li class="list-group-item">B2<input class="form-check-input" type="checkbox" value=""
+                    id="flexCheckDefault"></li>
+                <li class="list-group-item">B3<input class="form-check-input" type="checkbox" value=""
+                    id="flexCheckDefault"></li>
+              </ul>
+              <ul class="list-group list-group-horizontal-sm">
+                <li class="list-group-item">B4<input class="form-check-input" type="checkbox" value=""
+                    id="flexCheckDefault"></li>
+                <li class="list-group-item">B5<input class="form-check-input" type="checkbox" value=""
+                    id="flexCheckDefault"></li>
+                <li class="list-group-item">B6<input class="form-check-input" type="checkbox" value=""
+                    id="flexCheckDefault"></li>
+              </ul>
+              <ul class="list-group list-group-horizontal-md">
+                <li class="list-group-item">B7<input class="form-check-input" type="checkbox" value=""
+                    id="flexCheckDefault"></li>
+                <li class="list-group-item">B8<input class="form-check-input" type="checkbox" value=""
+                    id="flexCheckDefault"></li>
+                <li class="list-group-item">B9<input class="form-check-input" type="checkbox" value=""
+                    id="flexCheckDefault"></li>
+              </ul>
+            </div>
+            <div class="col">
+              Asientos en C
+              <ul class="list-group list-group-horizontal">
+                <li class="list-group-item">C1<input class="form-check-input" type="checkbox" value=""
+                    id="flexCheckDefault"></li>
+                <li class="list-group-item">C2<input class="form-check-input" type="checkbox" value=""
+                    id="flexCheckDefault"></li>
+                <li class="list-group-item">C3<input class="form-check-input" type="checkbox" value=""
+                    id="flexCheckDefault"></li>
+              </ul>
+              <ul class="list-group list-group-horizontal-sm">
+                <li class="list-group-item">C4<input class="form-check-input" type="checkbox" value=""
+                    id="flexCheckDefault"></li>
+                <li class="list-group-item">C5<input class="form-check-input" type="checkbox" value=""
+                    id="flexCheckDefault"></li>
+                <li class="list-group-item">C6<input class="form-check-input" type="checkbox" value=""
+                    id="flexCheckDefault"></li>
+              </ul>
+              <ul class="list-group list-group-horizontal-md">
+                <li class="list-group-item">C7<input class="form-check-input" type="checkbox" value=""
+                    id="flexCheckDefault"></li>
+                <li class="list-group-item">C8<input class="form-check-input" type="checkbox" value=""
+                    id="flexCheckDefault"></li>
+                <li class="list-group-item">C9<input class="form-check-input" type="checkbox" value=""
+                    id="flexCheckDefault"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="divdere">
+        Forma de pago
+        <select class="form-control form-control-sm" aria-label=".form-control-sm example" id="formaPago">
+          <option value="">Seleccione la forma de pago</option>
+          <option value="opcion1">Tarjeta de crédito</option>
+          <option value="opcion2">Tarjeta de débito</option>
+        </select>
+        Cliente
+        <input class="form-control form-control-sm" type="text" placeholder="Santiago Soto"
+          aria-label=".form-control-sm example" disabled id="cliente">
+        Fecha de venta
+        <input class="form-control form-control-sm" type="date" placeholder="Rápidos y Furiosos"
+          aria-label=".form-control-sm example" id="fechaVenta">
+      </div>
+    </div>
+  </form>
+
+  <div class="col-auto" style="text-align: center;">
+    <button type="submit" class="btn btn-primary" onclick="adicionarTiquetesOnline()">Guardar</button>
+  </div>
+
+  <script>
+
+    console.log("Tiquetes Registrados")
+    console.log(JSON.parse(localStorage.getItem("tiquetesonline") || "[]"))
+
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+
+.contenedor{
+
+    display: flex;
+    
+}
+
+.div1{
+
+    display: flex;
+    width: 25%;
+    padding-top: 150px;
+
+}
+
+
+.div_diagrama_niños {
+
+    height: 150px;
+    width: 150px;
+    background: conic-gradient(red 50%, purple 0 90%, yellow 0 100% );
+    border-radius: 50%;
+}
+
+.div_diagrama_adolecentes {
+
+    height: 150px;
+    width: 150px;
+    background: conic-gradient(red 50%, purple 0 90%, yellow 0 100% );
+    border-radius: 50%;
+}
+
+.div_diagrama_adulto {
+
+    height: 150px;
+    width: 150px;
+    background: conic-gradient(red 50%, purple 0 90%, yellow 0 100% );
+    border-radius: 50%;
+}
+
+.div_diagrama_adultomayor {
+
+    height: 150px;
+    width: 150px;
+    background: conic-gradient(red 50%, purple 0 90%, yellow 0 100% );
+    border-radius: 50%;
+}

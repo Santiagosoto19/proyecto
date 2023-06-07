@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../ccs/estilos_s.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="../js/objetos_soto.js"></script>
+    <script src="../js/sucursal.js"></script>
+</head>
+<body>
+
+    <header>
+        <a href="pagina_gerente.html"><button id="vover_sucursal">Volver</button></a>
+        <a href="../index.html"><button>Cerrar Sesión</button></a> 
+      </header>
+
+        <h1>Gestion de sucursales</h1>
+
+        
+      <div class="contenedor d-flex justify-content-center align-items-center">
+
+       
+
+
+          <form action="javascript:adicionarSucursal()"> 
+
+            Digite su codigo<input class="form-control form-control-sm" type="text" placeholder="Codigo" aria-label=".form-control-sm example" id="codigoSucursal" pattern="^[a-zA-Z0-9]+$">
+            Digite su direccion<input class="form-control form-control-sm" type="text" placeholder="Carrera 25 #10-15 Los Alamos" aria-label=".form-control-sm example" id="direccionSucursal" pattern="^(Calle|Carrera)\s\d{2}\s#\d{2}-\d{2}\s[a-zA-Z\s]+$">
+
+            seleccione un pais
+            <select class="form-control form-control-sm" aria-label=".form-control-sm example" id="paisSucursal">
+                <option value="">Ciudad</option>
+                <option value="Medellin">Medellin</option>
+                <option value="Cartagena">Cartagena</option>
+                <option value="Sincelejo">Sincelejo</option>
+              </select>
+
+              seleccione un departamento
+              <select class="form-control form-control-sm" aria-label=".form-control-sm example" id="departementoSucursal">
+                  <option value="">Departamento</option>
+                  <option value="Antioquia">Antioquia</option>
+                  <option value="Sucre">Sucre</option>
+                  <option value="Bolivar">Bolivar</option>
+                </select>
+
+                Digite al gerente<input class="form-control form-control-sm" type="text" placeholder="Gerente" aria-label=".form-control-sm example" id="gerenteSucursal">
+            Digite el numero de salas<input class="form-control form-control-sm" type="number" placeholder="N°Salas" aria-label=".form-control-sm example" id="salasSucursal">
+            Digite el numero de trabajadores<input class="form-control form-control-sm" type="number" placeholder="N°Trabajadores" aria-label=".form-control-sm example" id="trabajadoresSucursal">
+
+            seleccione si posee o no cafeteria
+            <select class="form-control form-control-sm" aria-label=".form-control-sm example" id="cafeteria">
+                <option value="">selecione una</option>
+                <option value="Si">Si</option>
+                <option value="No">No</option>
+              </select>
+
+            
+
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                    <input type="button" onclick="borrar_sucursal()" value="Eliminar">
+                
+            </form>
+        </div>
+
+
+    
+
+    <script>
+      console.log(JSON.parse(localStorage.getItem("sucursales") || "[]"))
+    </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+</body>
+</html>
